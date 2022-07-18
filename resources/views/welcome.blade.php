@@ -6,11 +6,13 @@
 
         <title>Laravel</title>
 
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
     </head>
     <body class="antialiased h-full w-full">
-        <div class="h-20 w-20 bg-red-50">
+        <div id="app">
 
         </div>
+
+        <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
