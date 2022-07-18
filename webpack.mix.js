@@ -1,11 +1,7 @@
-const mix = require('laravel-mix');
-const tailwindcss = require('tailwindcss');
+let mix = require('laravel-mix');
+require('mix-tailwindcss');
 
-mix.setPublicPath(`./public/css`);
-
-mix.js('./resources/js/app.js', './public/js')
+mix.js('./resources/js/app.js', './public/js').vue()
     .sass('./resources/sass/app.scss', './public/css')
-    .options({
-        postCss: [ tailwindcss('./tailwind.config.js') ],
-    })
+    .tailwind('./tailwind.config.js')
     .version();
